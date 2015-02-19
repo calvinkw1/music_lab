@@ -1,1 +1,22 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artists</title>
+</head>
+<body>
+  <h3>Showing all Artists</h3>
+
+  <p>
+    <% @artists.each do |artist| %>
+      <li><a href="/artists/<%= artist.id %>"><%= artist.name %></a></li>
+      <a href="/artists/<%= artist.id %>/edit">Edit</a>
+    <% end %>
+  </p>
+  
+  <p>
+    <a href="/artists/new">Add New Artist!</a>
+  </p>
+
+</body>
+</html>
